@@ -11,7 +11,10 @@ public class Pincipal {
 	          System.out.println(a1.getNome());
 	          System.out.println(d1.getNome());
 	          
+	          System.out.println(a1.getCurso());
+	          
 	          System.out.println(a1.imprimirAluno());
+	          
 	        
 	        
                  	        
