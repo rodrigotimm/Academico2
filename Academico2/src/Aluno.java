@@ -1,17 +1,17 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class Aluno {
 	private String nome;
 	private String RA;
 	private String sexo;
-	private Calendar data;
+	private LocalDate data;
 	
 
 	 @Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", RA=" + RA + ", sexo=" + sexo + ", data=" + getDtataComoString() + "]";
 	}
-	  public Aluno(String nome, String rA, String sexo, Calendar data) {
+	  public Aluno(String nome, String rA, String sexo, LocalDate data) {
 		super();
 		this.nome = nome;
 		RA = rA;
@@ -40,16 +40,16 @@ public class Aluno {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public Calendar getData() {
+	public LocalDate getData() {
 		return data;
 	}
-	public void setData(Calendar data) {
+	public void setData(LocalDate data) {
 		this.data = data;
 	}
 	public String getDtataComoString() {
-		return this.data.get(Calendar.DAY_OF_MONTH) +" | " +
-	this.data.get(Calendar.MONTH) + " | " +
-	this.data.get(Calendar.YEAR);
+		return data.getDayOfMonth() + "/" +
+                data.getMonthValue()+ "/" + 
+				data.getYear();
 	
 	
 	}

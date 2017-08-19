@@ -1,4 +1,4 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class Principal {
 
@@ -6,10 +6,7 @@ public class Principal {
 		// TODO Auto-generated method stu
 		
 		//registrar data de nascimento
-		Calendar data=Calendar.getInstance();
-		data.set(Calendar.YEAR,1995);
-		data.set(Calendar.MONTH, Calendar.JUNE);
-		data.set(Calendar.DAY_OF_MONTH,5);
+        LocalDate data = LocalDate.of(1995, 5, 5);
 		
 		
 		Aluno a1 = new Aluno ("Rodrigo Timm", "21709007","Masculino",data);
